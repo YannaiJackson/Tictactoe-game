@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript code to retrieve the query parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const folderName = urlParams.get('folderName');
+    
+        // Dynamically create a <script> element and set its src attribute based on the folderName parameter
+        const script = document.createElement('script');
+        script.src = '../' + folderName + '/script.js'; // Assuming the JavaScript file is always named script.js
+        document.head.appendChild(script);
+    </script>
 </head>
 <body>
     <h1>Tic Tac Toe</h1>
@@ -21,5 +31,4 @@
     </div>
     <div id="result">keep playing dude!</div>
 </body>
-<script src="../multiplayer/script.js" defer></script>
 </html>

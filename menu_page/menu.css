@@ -1,0 +1,80 @@
+body {
+    background-image: url('background.jpg');
+    background-size: cover; /* Adjusts the background image to cover the entire container */
+    /* Add more background properties as needed */
+}
+
+.box {
+    width: 400px; /* Adjust the width of the box */
+    height: 450px; /* Adjust the height of the box */
+    background-color: rgb(240, 255, 0); /* Background color of the box */
+    border: 2px solid #ccc; /* Border style */
+    border-radius: 20px; /* Border radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for a 3D effect */
+    position: absolute; /* Position the box absolutely */
+    top: 50%; /* Align the top edge of the box to the center of the page */
+    left: 50%; /* Align the left edge of the box to the center of the page */
+    transform: translate(-50%, -50%); /* Center the box horizontally and vertically */
+}
+
+.box_title {
+    text-align: center; /* Center the text horizontally */
+    font-family: Arial, sans-serif; /* Choose a font family */
+    font-size: 36px; /* Adjust the font size */
+    color: #333; /* Choose a color for the text */
+    margin-bottom: 65px; /* Add space below the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.menu-button {
+    background-color: #3DD1E7;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 350px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 50px auto;
+  }
+  
+
+.menu-button:focus {
+  outline: 0;
+}
+
+.menu-button:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.menu-button:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+    .menu-button {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
