@@ -42,12 +42,15 @@ function makeComputerMove() {
             index = Math.floor(Math.random() * 9); // Generate a random index
         } while (board_list[index]); // Keep generating until an empty cell is found
 
-        board_list[index] = currentPlayer === 'X' ? 'O' : 'X';
-        cells[index].innerText = currentPlayer === 'X' ? 'O' : 'X';
-        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        checkWinner(board_list);
+        // Introduce a delay of 3 seconds before placing 'O'
+        setTimeout(() => {
+            board_list[index] = 'O'; // Assign 'O' to the cell
+            cells[index].innerText = 'O'; // Update the corresponding cell on the UI with 'O'
+            checkWinner(board_list); // Check if the game has been won or ended in a draw
+        }, 1000); // Delay in miliseconds
     }
 }
+
 
 function handleCellClick(index) {
     if (!gameEnded && !board_list[index]) {

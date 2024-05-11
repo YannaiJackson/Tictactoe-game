@@ -8,11 +8,11 @@
     <script>
         // JavaScript code to retrieve the query parameter from the URL
         const urlParams = new URLSearchParams(window.location.search);
-        const folderName = urlParams.get('folderName');
+        const gameMode = urlParams.get('gameMode');
     
         // Dynamically create a <script> element and set its src attribute based on the folderName parameter
         const script = document.createElement('script');
-        script.src = '../' + folderName + '/script.js'; // Assuming the JavaScript file is always named script.js
+        script.src = '../game_modes/' + gameMode + '.js'; // Assuming the JavaScript file is always named script.js
         document.head.appendChild(script);
     </script>
 </head>
