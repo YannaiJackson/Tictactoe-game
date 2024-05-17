@@ -4,6 +4,7 @@ from fastapi import FastAPI, HTTPException
 from typing import List, Tuple
 from pydantic import BaseModel
 from evaluate_board import check_winner
+from algorithm import get_move
 from fastapi.middleware.cors import CORSMiddleware
 
 class Board(BaseModel):
@@ -24,6 +25,12 @@ app.add_middleware(
 async def check_winner_endpoint(board: Board):
     result = check_winner(board.board)
     return result
+
+@app.post("/get-move", response_model=int)
+async def get_move_endpoint(board: Board):
+    result = get_move(board.board)
+    return result
+
 
 if __name__ == "__main__":
     import uvicorn
